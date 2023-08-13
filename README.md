@@ -2,6 +2,8 @@
 
         project-folder/
         ├── server.js
+        ├── API
+        |   └──Api.js
         ├── views/
         │   └── index.ejs
         ├── public/
