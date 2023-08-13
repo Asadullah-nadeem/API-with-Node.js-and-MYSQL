@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tile Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Tile Management System</h1>
+
+        <h2>Add New Tile</h2>
+        <form method="post" action="/">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="text" class="form-control" id="data" name="data" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Tile</button>
+        </form>
+
+        <h2>Existing Tiles</h2>
+        <% if (tiles.length > 0) { %>
+            <ul>
+                <% tiles.forEach(tile => { %>
+                    <li>
+                        <strong>Title:</strong> <%= tile.title %><br>
+                        <strong>Data:</strong> <%= tile.data %><br>
+                        <strong>Description:</strong> <%= tile.description %>
+                        <a href="/delete/<%= tile.id %>">Delete</a>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No tiles found.</p>
+        <% } %>
+    </div>
+</body>
+</html>
