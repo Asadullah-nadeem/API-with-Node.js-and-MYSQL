@@ -1,15 +1,14 @@
 # API-with-Node.js-and-MYSQL
 
-project-folder/
-├── server.js
-├── views/
-│   └── index.ejs
-├── public/
-│   └── (other static files if needed)
-├── node_modules/
-├── package.json
-└── (other project files)
-
+        project-folder/
+        ├── server.js
+        ├── views/
+        │   └── index.ejs
+        ├── public/
+        │   └── (other static files if needed)
+        ├── node_modules/
+        ├── package.json
+        └── (other project files)
 
 Create a new directory for your project and navigate to it using your terminal:
         
